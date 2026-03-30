@@ -19,7 +19,7 @@ const sampleEntries: FoodEntry[] = [
     rating: 5,
     location: 'Reseda, CA',
     date: '2026-03-29',
-    photo: ''
+    photo: '/photos/korean-bbq-2026-03-29.jpg'
   }
 ];
 
@@ -107,13 +107,21 @@ export default function Home() {
                 <div style={{
                   height: '250px',
                   background: 'linear-gradient(45deg, #f59e0b, #d97706)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: 'white',
-                  fontSize: '4rem'
+                  overflow: 'hidden'
                 }}>
-                  {entry.id === '2' ? '🥢' : '🍜'}
+                  {entry.photo ? (
+                    <img
+                      src={entry.photo}
+                      alt={entry.restaurant}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
+                  ) : (
+                    <div style={{
+                      width: '100%', height: '100%',
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      color: 'white', fontSize: '4rem'
+                    }}>🍽️</div>
+                  )}
                 </div>
 
                 {/* Content */}

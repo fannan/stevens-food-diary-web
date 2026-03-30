@@ -1,6 +1,6 @@
 {
   "name": "stevens-food-diary-web",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Steven's Food Diary - Beautiful web showcase",
   "scripts": {
     "dev": "next dev",
