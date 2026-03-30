@@ -13,6 +13,15 @@ interface FoodEntry {
 
 const sampleEntries: FoodEntry[] = [
   {
+    id: '2',
+    restaurant: 'Korean BBQ Restaurant',
+    notes: 'Miso, salad, golden crunch roll and bulgogi - everything was delicious!',
+    rating: 5,
+    location: 'Reseda, CA',
+    date: '2026-03-29',
+    photo: '/api/placeholder/400/300'
+  },
+  {
     id: '1',
     restaurant: 'Kopan Ramen',
     notes: 'Perfect tonkotsu broth, amazing noodle texture! Steven loved this place.',
@@ -113,7 +122,7 @@ export default function Home() {
                   color: 'white',
                   fontSize: '4rem'
                 }}>
-                  🍜
+                  {entry.id === '2' ? '🥢' : '🍜'}
                 </div>
 
                 {/* Content */}
