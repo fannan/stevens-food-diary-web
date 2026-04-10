@@ -14,6 +14,16 @@ interface FoodEntry {
 
 const entries: FoodEntry[] = [
   {
+    id: '2',
+    restaurant: 'Black Angus Steakhouse',
+    notes: 'Steak and lobster night! Classic surf and turf - perfectly cooked. Living large! 🥩🦞',
+    rating: 5,
+    location: 'Reseda, CA',
+    date: '2026-04-09',
+    photo: '',
+    dishes: ['Steak', 'Lobster', 'Surf & Turf']
+  },
+  {
     id: '1',
     restaurant: 'Korean BBQ Restaurant',
     notes: 'Miso, salad, golden crunch roll and bulgogi - everything was delicious!',
@@ -25,7 +35,7 @@ const entries: FoodEntry[] = [
   }
 ];
 
-const version = '1.2.0';
+const version = '1.3.0';
 
 function StarRating({ rating }: { rating: number }) {
   return (
